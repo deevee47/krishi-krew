@@ -1,12 +1,5 @@
 "use client"
 import React, { useEffect } from "react";
-import {
-    ClerkProvider,
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton,
-} from "@clerk/nextjs";
 import Navbar from "@/components/generalComponents/Navbar";
 import Footer from "@/components/generalComponents/Footer";
 
@@ -43,12 +36,12 @@ export default function ClientLayout({
     }, []);
 
     return (
-        <ClerkProvider>
+
             <main className="bg-white">
                 <Navbar />
                 {children}
                 <Footer />
             </main>
-        </ClerkProvider>
+
     );
 }
